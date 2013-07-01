@@ -20,4 +20,6 @@ Gem::Specification.new do |s|
 	s.required_ruby_version = '>= 1.9.2'
 	s.executables = ['']
   # s.add_dependency 'xxx', '>= 0.4.2'
+  spec.add_development_dependency 'rspec'
+  spec.add_development_dependency 'coco', '>= 0.7'
 end
