@@ -10,7 +10,7 @@ task :default => :spec
 
 desc 'Test [GEM] with rspec'
 RSpec::Core::RakeTask.new(:spec) do |t|
-  t.rspec_opts = ['--color --format documentation']
+  t.rspec_opts = ['--color']
 end
 
 desc 'Check for code smells'
@@ -21,9 +21,7 @@ task :reek do
   sh "reek --quiet #{args} | ./reek.sed"
 end
 
-desc 'Build [GEM] & install it'
-task :install do
-  sh "gem build [GEM].gemspec"
-	f = FileList['[GEM]*gem'].to_a
-	sh "gem install #{f.first} --no-rdoc --no-ri"
+desc 'Generate documentation'
+task :doc do
+  sh "yard --plugin tomdoc"
 end

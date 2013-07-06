@@ -17,9 +17,11 @@ Gem::Specification.new do |s|
 	end.to_a
   s.files = FileList['lib/**/*.rb', 'bin/*', '[A-Z]*'].to_a + readmes
 	s.license = ''
-	s.required_ruby_version = '>= 1.9.2'
+	s.required_ruby_version = '>= 2.0.0'
 	s.executables = ['']
   # s.add_dependency 'xxx', '>= 0.4.2'
   spec.add_development_dependency 'rspec'
-  spec.add_development_dependency 'coco', '>= 0.7'
+  spec.add_development_dependency 'coco', '>= 0.7.1'
+  s.add_development_dependency('yard')
+  s.add_development_dependency('yard-tomdoc')
 end
