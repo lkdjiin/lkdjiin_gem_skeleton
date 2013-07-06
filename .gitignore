@@ -2,3 +2,5 @@ TODO
 *.gem
 coverage/
 *.swp
+doc/
+.yardoc/
